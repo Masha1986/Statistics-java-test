@@ -5,36 +5,36 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class StatsServiceTest {
     StatsService service = new StatsService();
-    int[] purchases = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
     @Test
     void summary() {
-        assertEquals(180, service.summary(purchases));
+        assertEquals(180, service.summary(sales));
     }
 
     @Test
     void averageCost() {
-        assertEquals(15, service.averageCost(purchases));
+        assertEquals(15, service.averageCost(sales));
     }
 
     @Test
     void maxMonth() {
-        assertEquals(8, service.maxMonth(purchases));
+        assertEquals(8, service.maxMonth(sales));
     }
 
     @Test
     void minMonth() {
-        assertEquals(9, service.minMonth(purchases));
+        assertEquals(9, service.minMonth(sales));
     }
 
     @Test
     void lowerMonths() {
-        assertEquals(5, service.lowerMonths(purchases));
+        assertEquals(5, service.lowerMonths(sales));
     }
 
     @Test
     void higherMonths() {
-        assertEquals(5, service.higherMonths(purchases));
+        assertEquals(5, service.higherMonths(sales));
     }
 }
 
